@@ -3,7 +3,7 @@ require('dotenv').config({
 });
 let express = require("express");
 let http = require("http");
-let cors = require('cors')
+let cors = require('cors');
 
 let router = require('./routes');
 
@@ -17,4 +17,6 @@ app.use(express.json());
 
 app.use(router);
 
-module.exports = serverHttp;
+const PORT = process.env.PORT || 8081
+
+serverHttp.listen(PORT, () => console.log(`is running on port ${PORT}`));
