@@ -7,6 +7,7 @@ class AuthenticateGitHubController {
         const service = new AuthenticateGitHubService()
 
         try {
+            console.log(process.env.HELLO);
             const result = await service.execute(code)
 
             return res.json(result);
