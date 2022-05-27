@@ -19,4 +19,4 @@ server.use(router);
 
 const PORT = process.env.PORT || 8081
 
-serverHttp.listen(PORT, () => console.log(`is running on port ${PORT}`));
+serverHttp.listen(PORT, () => console.log(`Sever is running on port ${PORT}`));
