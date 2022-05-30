@@ -14,6 +14,8 @@ class AuthenticateGitHubService {
                 "Accept": "application/json"
             }
         })
+
+        console.log(acessTokenResponse)
     
         const response = await axios.get("https://api.github.com/user", {
             headers: {
