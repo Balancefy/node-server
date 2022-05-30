@@ -7,7 +7,7 @@ class AuthenticateGitHubService {
             params: {
                 client_id: process.env.CLIENT_ID_GITHUB,
                 client_secret: process.env.CLIENT_SECRET_GITHUB,
-                redirect_uri: `https://balancefy-saving.vercel.app/${page}`,
+                redirect_uri: `https://balancefy-saving.vercel.app/Login`,
                 code: code,
             },
             headers: {
