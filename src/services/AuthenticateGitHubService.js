@@ -1,13 +1,13 @@
 const { default: axios } = require("axios");
 
 class AuthenticateGitHubService {
-    async execute(code) {
+    async execute(code, page) {
 
         const acessTokenResponse = await axios.post("https://github.com/login/oauth/access_token", null,  {
             params: {
                 client_id: process.env.CLIENT_ID_GITHUB,
                 client_secret: process.env.CLIENT_SECRET_GITHUB,
-                redirect_uri: "https://balancefy-saving.vercel.app/Cadastro",
+                redirect_uri: `https://balancefy-saving.vercel.app/${page}`,
                 code: code,
             },
             headers: {

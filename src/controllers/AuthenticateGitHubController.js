@@ -2,12 +2,12 @@ const AuthenticateGitHubService = require("../services/AuthenticateGitHubService
 
 class AuthenticateGitHubController {
     async handle(req, res) {
-        const { code } = req.body
+        const { code, page } = req.body
 
         const service = new AuthenticateGitHubService()
 
         try {
-            const result = await service.execute(code)
+            const result = await service.execute(code, page)
 
             return res.json(result);
         } catch (err) {
