@@ -3,8 +3,6 @@ const { default: axios } = require("axios");
 class AuthenticateGitHubService {
     async execute(code, page) {
 
-        console.log(page)
-
         const acessTokenResponse = await axios.post("https://github.com/login/oauth/access_token", null,  {
             params: {
                 client_id: process.env.CLIENT_ID_GITHUB,

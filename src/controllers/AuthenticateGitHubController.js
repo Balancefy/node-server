@@ -4,6 +4,8 @@ class AuthenticateGitHubController {
     async handle(req, res) {
         const { code, page } = req.body
 
+        console.log(req.body)
+
         const service = new AuthenticateGitHubService()
 
         try {
